@@ -1,5 +1,5 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="n6i-E6-8fh">
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="n6i-E6-8fh">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
@@ -15,27 +15,61 @@
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gDE-23-mD7">
-                                <state key="normal" title="Press Me"/>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gDE-23-mD7">
+                                <frame key="frameInset" minX="106" minY="397" width="108" height="27"/>
+                                <state key="normal" title="Start Game">
+                                    <color key="titleColor" red="0.27951161649214662" green="0.20154788577903979" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
                                 <connections>
                                     <segue destination="aa3-Cu-Jhl" kind="show" identifier="showSecondViewController" id="i8X-nh-keV"/>
                                 </connections>
                             </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Input Player Name for Player 1" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="eIx-g3-sov">
+                                <frame key="frameInset" minX="35" minY="225" width="250" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Number of Players Added: 0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="l60-LK-ecr">
+                                <frame key="frameInset" minX="40" minY="95" width="240" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="c8d-ZR-JLv">
+                                <frame key="frameInset" minX="75" minY="263" width="170" height="30"/>
+                                <state key="normal" title="Add Player Name">
+                                    <color key="titleColor" red="0.2795116165" green="0.20154788579999999" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="addPlayerButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="wzw-ti-EBo"/>
+                                </connections>
+                            </button>
                         </subviews>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" red="0.0" green="0.66807294585765087" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstItem="gDE-23-mD7" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="DOm-9C-erL"/>
-                            <constraint firstItem="gDE-23-mD7" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="u6t-Ef-D3D"/>
+                            <constraint firstItem="l60-LK-ecr" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="31" id="3c1-ZF-JkE"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="gDE-23-mD7" secondAttribute="bottom" constant="56" id="61y-GR-vLC"/>
+                            <constraint firstItem="l60-LK-ecr" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="DIN-r6-OU6"/>
+                            <constraint firstItem="eIx-g3-sov" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="161" id="DdZ-IQ-FFJ"/>
+                            <constraint firstItem="c8d-ZR-JLv" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="N2s-gB-sev"/>
+                            <constraint firstItem="eIx-g3-sov" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="RZj-PZ-Snx"/>
+                            <constraint firstItem="gDE-23-mD7" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="imc-n1-cmm"/>
+                            <constraint firstItem="c8d-ZR-JLv" firstAttribute="top" secondItem="eIx-g3-sov" secondAttribute="bottom" constant="8" id="j8z-q4-KzC"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="XSl-cz-Mrs"/>
+                    <connections>
+                        <outlet property="playerCountLabel" destination="l60-LK-ecr" id="Y85-1V-8lK"/>
+                        <outlet property="playerNameTextField" destination="eIx-g3-sov" id="WeL-5T-aon"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1076" y="138.98050974512745"/>
+            <point key="canvasLocation" x="1074.375" y="138.75"/>
         </scene>
         <!--Second View Controller-->
         <scene sceneID="lE6-8D-jVA">
@@ -46,23 +80,18 @@
                         <viewControllerLayoutGuide type="bottom" id="H7F-IW-bAg"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="ATQ-ml-82n">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5CZ-F8-Iqz">
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="BuT-I6-P10">
+                                <frame key="frameInset" minX="105" minY="102" width="110" height="200"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </stackView>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstItem="5CZ-F8-Iqz" firstAttribute="centerX" secondItem="ATQ-ml-82n" secondAttribute="centerX" id="1gO-wn-LW3"/>
-                            <constraint firstItem="5CZ-F8-Iqz" firstAttribute="centerY" secondItem="ATQ-ml-82n" secondAttribute="centerY" id="JeB-J1-lYX"/>
-                        </constraints>
+                        <color key="backgroundColor" red="0.2627450980392157" green="0.6705882352941176" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
                     <connections>
-                        <outlet property="label" destination="5CZ-F8-Iqz" id="ivn-Ag-qYs"/>
+                        <outlet property="stackView" destination="BuT-I6-P10" id="HBS-i6-6Oj"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="F1U-pK-vTa" userLabel="First Responder" sceneMemberID="firstResponder"/>

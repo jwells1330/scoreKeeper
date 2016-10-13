@@ -14,6 +14,7 @@
 		298F11661DAD3EB200B698CD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 298F11641DAD3EB200B698CD /* LaunchScreen.storyboard */; };
 		298F11711DAD3EB200B698CD /* MultipleViewControllersTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 298F11701DAD3EB200B698CD /* MultipleViewControllersTests.swift */; };
 		298F117C1DAD3F3700B698CD /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 298F117B1DAD3F3700B698CD /* SecondViewController.swift */; };
+		AF431E541DAF06B300C7C5A9 /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF431E531DAF06B300C7C5A9 /* Game.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,6 +39,7 @@
 		298F11701DAD3EB200B698CD /* MultipleViewControllersTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MultipleViewControllersTests.swift; sourceTree = "<group>"; };
 		298F11721DAD3EB200B698CD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		298F117B1DAD3F3700B698CD /* SecondViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
+		AF431E531DAF06B300C7C5A9 /* Game.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Game.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,6 +88,7 @@
 				298F11621DAD3EB200B698CD /* Assets.xcassets */,
 				298F11641DAD3EB200B698CD /* LaunchScreen.storyboard */,
 				298F11671DAD3EB200B698CD /* Info.plist */,
+				AF431E531DAF06B300C7C5A9 /* Game.swift */,
 			);
 			path = MultipleViewControllers;
 			sourceTree = "<group>";
@@ -205,6 +208,7 @@
 				298F117C1DAD3F3700B698CD /* SecondViewController.swift in Sources */,
 				298F115E1DAD3EB200B698CD /* ViewController.swift in Sources */,
 				298F115C1DAD3EB200B698CD /* AppDelegate.swift in Sources */,
+				AF431E541DAF06B300C7C5A9 /* Game.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -410,6 +414,7 @@
 				298F11771DAD3EB200B698CD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		298F11781DAD3EB200B698CD /* Build configuration list for PBXNativeTarget "MultipleViewControllersTests" */ = {
 			isa = XCConfigurationList;
@@ -418,6 +423,7 @@
 				298F117A1DAD3EB200B698CD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
