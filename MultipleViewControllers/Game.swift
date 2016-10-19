@@ -15,7 +15,7 @@ class Game{
     init(){
         
     }
-    
+
     func addPlayer(_ player:Player){
         print("adding player")
         players.append(player)
