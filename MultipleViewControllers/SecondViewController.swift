@@ -14,11 +14,51 @@ class SecondViewController: UIViewController {
     @IBOutlet weak var nameStackView: UIStackView!
     @IBOutlet weak var scoreStackView: UIStackView!
     
+    
+    @IBAction func button0(_ sender: UIButton) {
+        game.players[count].score += 0
+    }
+    @IBAction func button1(_ sender: UIButton) {
+    }
+    @IBAction func button2(_ sender: UIButton) {
+    }
+    @IBAction func button3(_ sender: UIButton) {
+    }
+    @IBAction func button4(_ sender: UIButton) {
+    }
+    @IBAction func button5(_ sender: UIButton) {
+    }
+    @IBAction func button6(_ sender: UIButton) {
+    }
+    @IBAction func button7(_ sender: UIButton) {
+    }
+    @IBAction func button8(_ sender: UIButton) {
+    }
+    @IBAction func button9(_ sender: UIButton) {
+    }
+    @IBAction func button10(_ sender: UIButton) {
+    }
+    @IBAction func button11(_ sender: UIButton) {
+    }
+    @IBAction func button12(_ sender: UIButton) {
+    }
+    @IBAction func button13(_ sender: UIButton) {
+    }
+    
+    
+    
+    
+    
+    
+    
     var game = Game()
     
     var labels: [UILabel] = []
+    var textFields: [UITextField] = []
 
     var yPos: CGFloat = 0
+    var count = 0
+
 
    /* constant for how much space between each label */
     let spacing: CGFloat = 4
@@ -35,6 +75,10 @@ class SecondViewController: UIViewController {
             addNewScoreLabel(game.players[num].score)
             
         }
+        
+        textFields[count].backgroundColor = UIColor.yellow
+//        labels[count].backgroundColor = UIColor.yellow
+        
     }
  
     func addNewNameLabel(_ name: String){
@@ -66,24 +110,35 @@ class SecondViewController: UIViewController {
         let labelHeight = scoreStackView.frame.height / maxLabels
         
         // create a label
-        let label = UILabel(frame: CGRect(x: 0, y: yPos, width: scoreStackView.frame.width, height: labelHeight))
+        let textField = UITextField(frame: CGRect(x: 0, y: yPos, width: scoreStackView.frame.width, height: labelHeight))
         
         // look-and-feel of the label
-        label.backgroundColor = UIColor.cyan
-        label.font = UIFont.preferredFont(forTextStyle: .body)
-        label.textColor = .black
-        label.textAlignment = .center
+        textField.backgroundColor = UIColor.cyan
+        textField.font = UIFont.preferredFont(forTextStyle: .body)
+        textField.textColor = .black
+        textField.textAlignment = .center
         
-        label.text = "\(score)"
+        textField.text = "\(score)"
         // add the label to the stack view
-        scoreStackView.addSubview(label)
-        
-        // remember the label
-        labels.append(label)
-        
+        scoreStackView.addSubview(textField)
+
+        textFields.append(textField)
         // update values for the next label
         yPos += labelHeight + spacing
+        
+        print(textField.isUserInteractionEnabled)
     }
     
 
+    func doGame(){
+        textFields[count].backgroundColor = UIColor.yellow
+        labels[count].backgroundColor = UIColor.yellow
+        
+        if(count==labels.count){
+            count = 0
+        }else{
+            count += 1
+        }
+        print(count)
+    }
 }

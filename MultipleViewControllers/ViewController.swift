@@ -27,7 +27,7 @@ class ViewController: UIViewController {
             playerNameTextField.text = ""
             playerNameTextField.placeholder = "Enter Name for Player \(game.playerCount+1)"
             if game.playerCount == 5{
-                sender.alpha = 0.5
+                sender.alpha = 1
                 playerNameTextField.text = "5 Players is the Maximum"
             }
         }
