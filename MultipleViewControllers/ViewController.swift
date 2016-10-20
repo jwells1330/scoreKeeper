@@ -12,14 +12,15 @@ class ViewController: UIViewController {
 
     @IBOutlet weak var playerCountLabel: UILabel!
     @IBOutlet weak var playerNameTextField: UITextField!
+    @IBOutlet weak var gameStart: UIButton!
     
     let game = Game()
 
     func addPlayerButton(_ sender: UIButton) {
+        gameStart.setTitle("Start Game", for: UIControlState.normal)
         if game.playerCount == 5 {
             
         }else{
-            
             let playerName = playerNameTextField.text
             print(playerNameTextField.text)
             game.addPlayer(Player(playerName!))
@@ -41,14 +42,18 @@ class ViewController: UIViewController {
     
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "showSecondViewController" {
+        if segue.identifier == "showSecondViewController"{
             let secondViewController = segue.destination as! SecondViewController
                 secondViewController.game = self.game
         }
     }
-
-    
-    
-    
+    override func shouldPerformSegue(withIdentifier identifier: String, sender: Any?) -> Bool {
+        if identifier == "showSecondViewController" && game.playerCount>0{
+            return true
+        }else{
+            gameStart.setTitle("Please Enter at Least 1 Player", for: UIControlState.normal)
+            return false
+        }
+    }
 }
 

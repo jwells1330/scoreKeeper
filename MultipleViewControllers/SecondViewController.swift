@@ -16,33 +16,116 @@ class SecondViewController: UIViewController {
     
     
     @IBAction func button0(_ sender: UIButton) {
+        let textScore:Int = Int(textFields[count].text!)!
+        game.players[count].score = textScore
+        
         game.players[count].score += 0
+        textFields[count].text = "\(game.players[count].score)"
+        nextTurn()
     }
     @IBAction func button1(_ sender: UIButton) {
+        let textScore:Int = Int(textFields[count].text!)!
+        game.players[count].score = textScore
+        
+        game.players[count].score += 1
+        textFields[count].text = "\(game.players[count].score)"
+        nextTurn()
     }
     @IBAction func button2(_ sender: UIButton) {
+        let textScore:Int = Int(textFields[count].text!)!
+        game.players[count].score = textScore
+        
+        game.players[count].score += 2
+        textFields[count].text = "\(game.players[count].score)"
+        nextTurn()
     }
     @IBAction func button3(_ sender: UIButton) {
+        let textScore:Int = Int(textFields[count].text!)!
+        game.players[count].score = textScore
+        
+        game.players[count].score += 3
+        textFields[count].text = "\(game.players[count].score)"
+        nextTurn()
     }
     @IBAction func button4(_ sender: UIButton) {
+        let textScore:Int = Int(textFields[count].text!)!
+        game.players[count].score = textScore
+        
+        game.players[count].score += 4
+        textFields[count].text = "\(game.players[count].score)"
+        nextTurn()
     }
     @IBAction func button5(_ sender: UIButton) {
+        let textScore:Int = Int(textFields[count].text!)!
+        game.players[count].score = textScore
+        
+        game.players[count].score += 5
+        textFields[count].text = "\(game.players[count].score)"
+        nextTurn()
     }
     @IBAction func button6(_ sender: UIButton) {
+        let textScore:Int = Int(textFields[count].text!)!
+        game.players[count].score = textScore
+        
+        game.players[count].score += 6
+        textFields[count].text = "\(game.players[count].score)"
+        nextTurn()
     }
     @IBAction func button7(_ sender: UIButton) {
+        let textScore:Int = Int(textFields[count].text!)!
+        game.players[count].score = textScore
+        
+        game.players[count].score += 7
+        textFields[count].text = "\(game.players[count].score)"
+        nextTurn()
     }
     @IBAction func button8(_ sender: UIButton) {
+        let textScore:Int = Int(textFields[count].text!)!
+        game.players[count].score = textScore
+        
+        game.players[count].score += 8
+        textFields[count].text = "\(game.players[count].score)"
+        nextTurn()
     }
     @IBAction func button9(_ sender: UIButton) {
+        let textScore:Int = Int(textFields[count].text!)!
+        game.players[count].score = textScore
+        
+        game.players[count].score += 9
+        textFields[count].text = "\(game.players[count].score)"
+        nextTurn()
     }
     @IBAction func button10(_ sender: UIButton) {
+        let textScore:Int = Int(textFields[count].text!)!
+        game.players[count].score = textScore
+        
+        game.players[count].score += 10
+        textFields[count].text = "\(game.players[count].score)"
+        nextTurn()
     }
     @IBAction func button11(_ sender: UIButton) {
+        let textScore:Int = Int(textFields[count].text!)!
+        game.players[count].score = textScore
+        
+        game.players[count].score += 11
+        textFields[count].text = "\(game.players[count].score)"
+        nextTurn()
     }
     @IBAction func button12(_ sender: UIButton) {
+        let textScore:Int = Int(textFields[count].text!)!
+        game.players[count].score = textScore
+        
+        game.players[count].score += 12
+        textFields[count].text = "\(game.players[count].score)"
+        nextTurn()
     }
     @IBAction func button13(_ sender: UIButton) {
+        let textScore:Int = Int(textFields[count].text!)!
+        game.players[count].score = textScore
+        
+        game.players[count].score += 13
+        textFields[count].text = "\(game.players[count].score)"
+        nextTurn()
     }
     
     
@@ -77,7 +160,7 @@ class SecondViewController: UIViewController {
         }
         
         textFields[count].backgroundColor = UIColor.yellow
-//        labels[count].backgroundColor = UIColor.yellow
+        labels[count].backgroundColor = UIColor.yellow
         
     }
  
@@ -130,15 +213,17 @@ class SecondViewController: UIViewController {
     }
     
 
-    func doGame(){
-        textFields[count].backgroundColor = UIColor.yellow
-        labels[count].backgroundColor = UIColor.yellow
+    func nextTurn(){
+        textFields[count].backgroundColor = UIColor.cyan
+        labels[count].backgroundColor = UIColor.cyan
         
-        if(count==labels.count){
+        if(count==labels.count - 1){
             count = 0
         }else{
             count += 1
         }
-        print(count)
+        
+        textFields[count].backgroundColor = UIColor.yellow
+        labels[count].backgroundColor = UIColor.yellow
     }
 }

@@ -3,7 +3,6 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
-        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -60,6 +59,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="XSl-cz-Mrs"/>
                     <connections>
+                        <outlet property="gameStart" destination="gDE-23-mD7" id="HMb-Us-yb9"/>
                         <outlet property="playerCountLabel" destination="l60-LK-ecr" id="Y85-1V-8lK"/>
                         <outlet property="playerNameTextField" destination="eIx-g3-sov" id="WeL-5T-aon"/>
                     </connections>
@@ -207,18 +207,16 @@
                                 </subviews>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="LSY-ou-3mN">
-                                <frame key="frameInset" minX="224" minY="72" width="80" height="200"/>
+                                <frame key="frameInset" minX="228" minY="72" width="166" height="368"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </stackView>
-                            <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="BuT-I6-P10">
-                                <frame key="frameInset" minX="16" minY="72" width="138" height="200"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="BuT-I6-P10">
+                                <frame key="frameInset" minX="20" minY="72" width="138" height="368"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </stackView>
                         </subviews>
                         <color key="backgroundColor" red="0.2627450980392157" green="0.6705882352941176" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstAttribute="leadingMargin" secondItem="BuT-I6-P10" secondAttribute="leading" id="DMA-KC-2lk"/>
-                            <constraint firstItem="H7F-IW-bAg" firstAttribute="top" secondItem="BuT-I6-P10" secondAttribute="bottom" constant="296" id="Tso-mZ-Jw2"/>
-                            <constraint firstItem="BuT-I6-P10" firstAttribute="top" secondItem="IUy-Ku-MrZ" secondAttribute="bottom" constant="8" id="VXI-SC-Ref"/>
                             <constraint firstItem="H7F-IW-bAg" firstAttribute="top" secondItem="heC-Ec-Bql" secondAttribute="bottom" constant="20" id="hde-od-6eH"/>
                             <constraint firstItem="heC-Ec-Bql" firstAttribute="centerX" secondItem="ATQ-ml-82n" secondAttribute="centerX" id="iJ6-L5-uxM"/>
                         </constraints>
