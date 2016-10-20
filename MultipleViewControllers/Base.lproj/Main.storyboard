@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -15,7 +16,7 @@
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gDE-23-mD7">
@@ -77,7 +78,7 @@
                         <viewControllerLayoutGuide type="bottom" id="H7F-IW-bAg"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="ATQ-ml-82n">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" alignment="bottom" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="heC-Ec-Bql">
@@ -206,29 +207,33 @@
                                     </stackView>
                                 </subviews>
                             </stackView>
-                            <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="LSY-ou-3mN">
-                                <frame key="frameInset" minX="228" minY="72" width="166" height="368"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </stackView>
-                            <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="BuT-I6-P10">
-                                <frame key="frameInset" minX="20" minY="72" width="138" height="368"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="3z6-vK-ouO"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="4JV-Cz-4dn">
+                                <color key="backgroundColor" red="0.0" green="1" blue="0.030457442944551882" alpha="1" colorSpace="calibratedRGB"/>
                             </stackView>
                         </subviews>
                         <color key="backgroundColor" red="0.2627450980392157" green="0.6705882352941176" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstItem="H7F-IW-bAg" firstAttribute="top" secondItem="heC-Ec-Bql" secondAttribute="bottom" constant="20" id="hde-od-6eH"/>
-                            <constraint firstItem="heC-Ec-Bql" firstAttribute="centerX" secondItem="ATQ-ml-82n" secondAttribute="centerX" id="iJ6-L5-uxM"/>
+                            <constraint firstItem="heC-Ec-Bql" firstAttribute="centerX" secondItem="ATQ-ml-82n" secondAttribute="centerX" id="41P-ga-iwJ"/>
+                            <constraint firstItem="4JV-Cz-4dn" firstAttribute="leading" secondItem="3z6-vK-ouO" secondAttribute="trailing" constant="24" id="ApR-Wm-jEZ"/>
+                            <constraint firstItem="3z6-vK-ouO" firstAttribute="leading" secondItem="ATQ-ml-82n" secondAttribute="leadingMargin" id="CF9-Dv-AqZ"/>
+                            <constraint firstItem="3z6-vK-ouO" firstAttribute="top" secondItem="IUy-Ku-MrZ" secondAttribute="bottom" constant="8" symbolic="YES" id="EEU-cf-Eph"/>
+                            <constraint firstItem="4JV-Cz-4dn" firstAttribute="trailing" secondItem="ATQ-ml-82n" secondAttribute="trailingMargin" id="KXE-7C-2qu"/>
+                            <constraint firstItem="heC-Ec-Bql" firstAttribute="top" secondItem="3z6-vK-ouO" secondAttribute="bottom" constant="69" id="WgA-vS-Fo3"/>
+                            <constraint firstAttribute="bottom" secondItem="heC-Ec-Bql" secondAttribute="bottom" constant="20" symbolic="YES" id="fxi-B9-ncW"/>
+                            <constraint firstItem="3z6-vK-ouO" firstAttribute="top" secondItem="4JV-Cz-4dn" secondAttribute="top" id="je4-G2-0LX"/>
+                            <constraint firstItem="3z6-vK-ouO" firstAttribute="bottom" secondItem="4JV-Cz-4dn" secondAttribute="bottom" id="jpy-U9-W8L"/>
+                            <constraint firstItem="4JV-Cz-4dn" firstAttribute="leading" secondItem="ATQ-ml-82n" secondAttribute="leading" constant="261" id="wbG-Ls-Wq5"/>
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="nameStackView" destination="BuT-I6-P10" id="CaP-ca-SZ9"/>
-                        <outlet property="scoreStackView" destination="LSY-ou-3mN" id="TY9-jO-KqV"/>
+                        <outlet property="nameStackView" destination="3z6-vK-ouO" id="GdK-Pl-L7x"/>
+                        <outlet property="scoreStackView" destination="4JV-Cz-4dn" id="Rda-aJ-hbn"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="F1U-pK-vTa" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2015.625" y="137.32394366197184"/>
+            <point key="canvasLocation" x="2014.4927536231885" y="136.95652173913044"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="cMc-Ad-OXO">

@@ -144,7 +144,7 @@ class SecondViewController: UIViewController {
 
 
    /* constant for how much space between each label */
-    let spacing: CGFloat = 4
+    let spacing: CGFloat = 10
 
    /* constant for how many labels we're expecting */
     let maxLabels: CGFloat = 5
@@ -167,10 +167,12 @@ class SecondViewController: UIViewController {
     func addNewNameLabel(_ name: String){
         
         // how tall is each label
-        let labelHeight = nameStackView.frame.height / maxLabels
+        let labelHeight = nameStackView.frame.height
         
         // create a label
         let label = UILabel(frame: CGRect(x: 0, y: yPos, width: nameStackView.frame.width, height: labelHeight))
+        
+        print(nameStackView.frame.size);
         
         // look-and-feel of the label
         label.backgroundColor = UIColor.cyan
@@ -179,7 +181,8 @@ class SecondViewController: UIViewController {
         label.textAlignment = .center
         label.text = name
         // add the label to the stack view
-        nameStackView.addSubview(label)
+        //nameStackView.addSubview(label)
+        nameStackView.addArrangedSubview(label)
         
         // remember the label
         labels.append(label)
@@ -190,7 +193,7 @@ class SecondViewController: UIViewController {
     func addNewScoreLabel(_ score: Int){
         
         // how tall is each label
-        let labelHeight = scoreStackView.frame.height / maxLabels
+        let labelHeight = scoreStackView.frame.height
         
         // create a label
         let textField = UITextField(frame: CGRect(x: 0, y: yPos, width: scoreStackView.frame.width, height: labelHeight))
@@ -203,7 +206,8 @@ class SecondViewController: UIViewController {
         
         textField.text = "\(score)"
         // add the label to the stack view
-        scoreStackView.addSubview(textField)
+        //scoreStackView.addSubview(textField)
+        scoreStackView.addArrangedSubview(textField)
 
         textFields.append(textField)
         // update values for the next label
