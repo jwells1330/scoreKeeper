@@ -1,9 +1,9 @@
 //
 //  SecondViewController.swift
-//  MultipleViewControllers
-//
-//  Created by Joel Hollingsworth on 10/11/16.
-//  Copyright © 2016 Joel Hollingsworth. All rights reserved.
+//  KigiScoringApp
+//  
+//  Originally by Joel Hollingsworth
+//  Heavily modified by Jacob Wells and Evan Ashwell
 //
 
 import UIKit
@@ -144,7 +144,7 @@ class SecondViewController: UIViewController {
 
 
    /* constant for how much space between each label */
-    let spacing: CGFloat = 10
+    let spacing: CGFloat = 20
 
    /* constant for how many labels we're expecting */
     let maxLabels: CGFloat = 5
@@ -158,6 +158,8 @@ class SecondViewController: UIViewController {
             addNewScoreLabel(game.players[num].score)
             
         }
+        nameStackView.spacing = spacing
+        scoreStackView.spacing = spacing
         
         textFields[count].backgroundColor = UIColor.yellow
         labels[count].backgroundColor = UIColor.yellow
@@ -172,8 +174,6 @@ class SecondViewController: UIViewController {
         // create a label
         let label = UILabel(frame: CGRect(x: 0, y: yPos, width: nameStackView.frame.width, height: labelHeight))
         
-        print(nameStackView.frame.size);
-        
         // look-and-feel of the label
         label.backgroundColor = UIColor.cyan
         label.font = UIFont.preferredFont(forTextStyle: .body)
@@ -181,7 +181,6 @@ class SecondViewController: UIViewController {
         label.textAlignment = .center
         label.text = name
         // add the label to the stack view
-        //nameStackView.addSubview(label)
         nameStackView.addArrangedSubview(label)
         
         // remember the label
@@ -206,14 +205,11 @@ class SecondViewController: UIViewController {
         
         textField.text = "\(score)"
         // add the label to the stack view
-        //scoreStackView.addSubview(textField)
         scoreStackView.addArrangedSubview(textField)
 
         textFields.append(textField)
         // update values for the next label
         yPos += labelHeight + spacing
-        
-        print(textField.isUserInteractionEnabled)
     }
     
 

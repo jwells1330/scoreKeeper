@@ -1,9 +1,9 @@
 //
 //  Game.swift
-//  MultipleViewControllers
+//  KigiScoringApp
 //
-//  Created by Jake Wells on 10/12/16.
-//  Copyright © 2016 Joel Hollingsworth. All rights reserved.
+//
+//  By Jacob Wells and Evan Ashwell
 //
 
 import Foundation
@@ -17,7 +17,6 @@ class Game{
     }
 
     func addPlayer(_ player:Player){
-        print("adding player")
         players.append(player)
         playerCount += 1
     }
@@ -25,13 +24,10 @@ class Game{
 
 class Player{
     
-    var game = Game()
-    
     var name: String
     var score = 0
     
     init(_ name:String){
-        print("Making Player")
         self.name = name
     }
 }

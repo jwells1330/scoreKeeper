@@ -1,9 +1,9 @@
 //
 //  ViewController.swift
-//  MultipleViewControllers
+//  KigiScoringApp
 //
-//  Created by Joel Hollingsworth on 10/11/16.
-//  Copyright © 2016 Joel Hollingsworth. All rights reserved.
+//  Originally by Joel Hollingsworth
+//  Heavily modified by Jacob Wells and Evan Ashwell
 //
 
 import UIKit
@@ -18,11 +18,10 @@ class ViewController: UIViewController {
 
     func addPlayerButton(_ sender: UIButton) {
         gameStart.setTitle("Start Game", for: UIControlState.normal)
-        if game.playerCount == 5 {
+        if game.playerCount == 5 || (playerNameTextField.text?.isEmpty)!{
             
         }else{
             let playerName = playerNameTextField.text
-            print(playerNameTextField.text)
             game.addPlayer(Player(playerName!))
             playerCountLabel.text = "PlayerCount = \(game.playerCount)"
             playerNameTextField.text = ""
